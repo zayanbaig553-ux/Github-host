@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Paradise | Nature's Beauty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary-color: #8a2be2;
+            --secondary-color: #ff69b4;
+            --accent-color: #32cd32;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fefefe;
+        }
+        
+        .navbar-brand {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 32px;
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .carousel-item {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .carousel-caption {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            color: var(--dark-color);
+            bottom: 20%;
+        }
+        
+        .carousel-caption h3 {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-title {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .card-text {
+            color: #666;
+        }
+        
+        .price {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+            margin: 10px auto;
+        }
+        
+        .flower-icon {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        footer {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s, color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            color: white;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .social-icons .fa-facebook-f:hover {
+            background-color: #3b5998;
+        }
+        
+        .social-icons .fa-twitter:hover {
+            background-color: #1da1f2;
+        }
+        
+        .social-icons .fa-instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+        
+        .social-icons .fa-pinterest:hover {
+            background-color: #bd081c;
+        }
+        
+        .about-section {
+            background-color: #f9f5ff;
+            padding: 40px 0;
+        }
+        
+        .warranty-section {
+            background-color: #fff5f9;
+            padding: 40px 0;
+        }
+        
+        /* Cart Modal Styles */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cart-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .cart-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .cart-option {
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .cart-option:hover {
+            border-color: var(--primary-color);
+            background-color: #f8f9fa;
+        }
+        
+        .cart-option.selected {
+            border-color: var(--primary-color);
+            background-color: rgba(138, 43, 226, 0.1);
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .quantity-display {
+            font-size: 20px;
+            font-weight: bold;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        /* Cart Badge */
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Sign Up Modal */
+        .signup-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .signup-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(138, 43, 226, 0.25);
+        }
+        
+        /* Cart Items Display */
+        .cart-items {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        
+        .cart-item-info {
+            flex-grow: 1;
+        }
+        
+        .cart-item-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .cart-item-details {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .cart-item-price {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .cart-total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #eee;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        
+        .remove-item {
+            background: none;
+            border: none;
+            color: #ff6b6b;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+        
+        /* Products Section Styling */
+        .products-section {
+            padding: 60px 0;
+            background: linear-gradient(to bottom, #ffffff, #f9f5ff);
+        }
+        
+        .product-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 60vh;
+            }
+            
+            .carousel-caption {
+                bottom: 10%;
+                padding: 15px;
+            }
+            
+            .social-icons a {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+            
+            .cart-content, .signup-content {
+                width: 95%;
+                padding: 20px;
+            }
+            
+            .navbar-nav .btn {
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .carousel-item {
+                height: 50vh;
+            }
+            
+            .carousel-caption h3 {
+                font-size: 1.2rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 0.9rem;
+            }
+            
+            .social-icons {
+                gap: 10px;
+            }
+            
+            .social-icons a {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+        
+        /* Navbar Sign Up Button */
+        .navbar .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .navbar .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Cart Dropdown */
+        .cart-dropdown {
+            position: relative;
+        }
+        
+        .cart-preview {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px;
+        }
+        
+        .cart-dropdown:hover .cart-preview {
+            display: block;
+        }
+        
+        .cart-preview-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-preview-item:last-child {
+            border-bottom: none;
+        }
+        
+        .view-cart-btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Flower Paradise</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"> <a class="nav-link" href="#home">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#products">Products</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#services">Services</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="cart-dropdown position-relative me-3">
+                        <button class="btn btn-outline-primary" id="cartButton">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-badge" id="cartBadge">0</span>
+                        </button>
+                        <div class="cart-preview" id="cartPreview">
+                            <div id="cartPreviewItems">
+                                <!-- Cart items will be dynamically added here -->
+                            </div>
+                            <div class="cart-preview-total mt-2 pt-2 border-top">
+                                <strong>Total: $<span id="previewTotal">0.00</span></strong>
+                            </div>
+                            <button class="btn btn-primary view-cart-btn" id="viewCartBtn">View Cart</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="signUpButton">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('flowers-field-beautiful-scape-4k-ipad-pro.jpg');">
+                <div class="carousel-caption">
+                    <h3>Nature's Masterpiece</h3>
+                    <p>Experience the breathtaking beauty of nature's finest creations.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('360_F_734643378_D1BuHpeeRm5wfrXTYrvPebh18KDJOiLi\ \(1\).jpg');">
+                <div class="carousel-caption">
+                    <h3>Blooms for Every Occasion</h3>
+                    <p>From weddings to birthdays, we have the perfect floral arrangement for your special moments.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('photo-1615958354408-c15ad934a549.jpg');">
+                <div class="carousel-caption">
+                    <h3>Freshness Guaranteed</h3>
+                    <p>Our flowers are sourced daily to ensure maximum freshness and longevity.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Products Section -->
+    <div class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Beautiful Flower Collection</h2>
+            <p class="text-center mb-5">Discover our handpicked selection of premium flowers for every occasion</p>
+            
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" class="card-img-top" alt="Rose Bouquet">
+                            <span class="product-badge">Bestseller</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Elegant Rose Bouquet</h5>
+                            <p class="card-text flex-grow-1">A stunning arrangement of premium red roses, perfect for romantic occasions and anniversaries.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">$49.99</span>
+                                <button class="btn btn-primary add-to-cart" data-product="Elegant Rose Bouquet" data-price="49.99" data-id="1">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="images (3).jpg" class="card-img-top" alt="Mixed Flowers">
+                            <span class="product-badge">Popular</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Spring Garden Mix</h5>
+                            <p class="card-text flex-grow-1">A vibrant mix of seasonal flowers that brings the beauty of spring indoors with colorful blossoms.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">$39.99</span>
+                                <button class="btn btn-primary add-to-cart" data-product="Spring Garden Mix" data-price="39.99" data-id="2">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="images (1).jpg" class="card-img-top" alt="Orchid">
+                            <span class="product-badge">Exotic</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Exotic Orchid Collection</h5>
+                            <p class="card-text flex-grow-1">Elegant orchids that add sophistication to any space with their unique beauty and long-lasting blooms.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">$59.99</span>
+                                <button class="btn btn-primary add-to-cart" data-product="Exotic Orchid Collection" data-price="59.99" data-id="3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="images (2).jpg" class="card-img-top" alt="Sunflower Bouquet">
+                            <span class="product-badge">Cheerful</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sunshine Sunflower Bouquet</h5>
+                            <p class="card-text flex-grow-1">Bright and cheerful sunflowers that bring warmth and happiness to any room or occasion.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">$44.99</span>
+                                <button class="btn btn-primary add-to-cart" data-product="Sunshine Sunflower Bouquet" data-price="44.99" data-id="4">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" class="card-img-top" alt="Lily Arrangement">
+                            <span class="product-badge">Elegant</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pure White Lily Arrangement</h5>
+                            <p class="card-text flex-grow-1">Graceful white lilies symbolizing purity and refined beauty, perfect for special ceremonies.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">$54.99</span>
+                                <button class="btn btn-primary add-to-cart" data-product="Pure White Lily Arrangement" data-price="54.99" data-id="5">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="download (1).jpg" class="card-img-top" alt="Tulip Bouquet">
+                            <span class="product-badge">Spring Special</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Colorful Tulip Bouquet</h5>
+                            <p class="card-text flex-grow-1">A vibrant mix of colorful tulips that announce the arrival of spring with their cheerful presence.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">$42.99</span>
+                                <button class="btn btn-primary add-to-cart" data-product="Colorful Tulip Bouquet" data-price="42.99" data-id="6">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="images (5).jpg" class="card-img-top" alt="Carnation Mix">
+                            <span class="product-badge">Long-lasting</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sweet Carnation Mix</h5>
+                            <p class="card-text flex-grow-1">Beautiful carnations in various colors, known for their long-lasting freshness and delicate fragrance.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="price">$36.99</span>
+                                <button class="btn btn-primary add-to-cart" data-product="Sweet Carnation Mix" data-price="36.99" data-id="7">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Your Shopping Cart</h4>
+                <button type="button" class="btn-close" id="closeCartModal"></button>
+            </div>
+            
+            <div class="cart-items" id="cartItemsContainer">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            
+            <div class="cart-total">
+                Total: $<span id="cartTotal">0.00</span>
+            </div>
+            
+            <div class="d-flex justify-content-between mt-4">
+                <button class="btn btn-outline-secondary" id="continueShopping">Continue Shopping</button>
+                <button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="signup-modal" id="signUpModal">
+        <div class="signup-content">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4>Create an Account</h4>
+                <button type="button" class="btn-close" id="closeSignUpModal"></button>
+            </div>
+            <form id="signUpForm">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                    <label class="form-check-label" for="agreeTerms">I agree to the <a href="#">Terms and Conditions</a></label>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </div>
+                <div class="text-center mt-3">
+                    <p class="mb-0">Already have an account? <a href="#" id="loginLink">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Warranty Section -->
+    <div class="warranty-section mt-5" id="services">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1559251606-c623743a6d76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Flower Care" class="img-fluid rounded">
+                </div>
+
+                <!-- Text Column -->
+                <div class="col-md-6">
+                    <h3 class="section-title text-start">Our Freshness Guarantee</h3>
+                    <p>
+                        At Flower Paradise, we stand behind the quality and freshness of every floral arrangement we deliver. Our commitment to excellence ensures your complete satisfaction.
+                    </p>
+                    <p>
+                        <i class="fas fa-check flower-icon"></i> <strong>7-Day Freshness Guarantee:</strong> All our flowers are guaranteed to stay fresh for at least 7 days with proper care.
+                    </p>
+                    <p>
+                        <i class="fas fa-check flower-icon"></i> <strong>Delivery Promise:</strong> We guarantee delivery on your specified date or your money back.
+                    </p>
+                    <p>
+                        <i class="fas fa-check flower-icon"></i> <strong>Quality Assurance:</strong> If you're not completely satisfied with your order, contact us within 24 hours for a replacement or refund.
+                    </p>
+                    <p>
+                        <i class="fas fa-check flower-icon"></i> <strong>Expert Advice:</strong> Our florists are available to provide care instructions and tips to extend the life of your flowers.
+                    </p>
+                    <button class="btn btn-primary mt-3">Learn More About Our Guarantee</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section mt-5" id="about">
+        <div class="container">
+            <h2 class="section-title">About Flower Paradise</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <p>
+                        Flower Paradise is a family-owned floral boutique with over 25 years of experience in creating breathtaking floral arrangements. Founded in 1998 by master florist Isabella Rose, our shop has grown from a small neighborhood store to a beloved destination for flower enthusiasts across the region.
+                    </p>
+                    <p>
+                        We believe that flowers have the power to transform spaces, uplift spirits, and communicate emotions when words fall short. That's why we're passionate about creating arrangements that not only look beautiful but also carry meaning and intention.
+                    </p>
+                    <p>
+                        Our team of skilled florists carefully selects each stem from local growers and international suppliers to ensure the highest quality and freshness. We're committed to sustainable practices and supporting our local flower farming community.
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-leaf fa-3x flower-icon"></i>
+                    <h4>Freshness</h4>
+                    <p>Our flowers are sourced daily to ensure maximum freshness and longevity.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-heart fa-3x flower-icon"></i>
+                    <h4>Passion</h4>
+                    <p>We pour our hearts into every arrangement, ensuring it's crafted with care.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-award fa-3x flower-icon"></i>
+                    <h4>Quality</h4>
+                    <p>We use only the finest flowers and materials in all our creations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container mt-5" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Visit Our Store</h4>
+                <p><i class="fas fa-map-marker-alt flower-icon"></i> 123 Blossom Street, Flower District</p>
+                <p><i class="fas fa-phone flower-icon"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope flower-icon"></i> info@flowerparadise.com</p>
+                <h4 class="mt-4">Store Hours</h4>
+                <p>Monday - Friday: 9am - 7pm</p>
+                <p>Saturday: 9am - 6pm</p>
+                <p>Sunday: 10am - 4pm</p>
+            </div>
+            <div class="col-md-8">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="mb-4">Flower Paradise</h4>
+                    <p>Bringing nature's beauty to your doorstep with fresh, exquisite floral arrangements for every occasion.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <div class="footer-links">
+                        <p><a href="#home">Home</a></p>
+                        <p><a href="#about">About Us</a></p>
+                        <p><a href="#products">Products</a></p>
+                        <p><a href="#services">Services</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-4">Our Services</h5>
+                    <div class="footer-links">
+                        <p><a href="#">Wedding Flowers</a></p>
+                        <p><a href="#">Event Decorations</a></p>
+                        <p><a href="#">Corporate Arrangements</a></p>
+                        <p><a href="#">Subscription Service</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to receive updates on new arrivals and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-light" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2023 Flower Paradise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cart functionality
+        let cart = [];
+        let cartItemsCount = 0;
+        
+        // Elements
+        const cartModal = document.getElementById('cartModal');
+        const cartBadge = document.getElementById('cartBadge');
+        const cartItemsContainer = document.getElementById('cartItemsContainer');
+        const cartTotal = document.getElementById('cartTotal');
+        const cartPreview = document.getElementById('cartPreview');
+        const cartPreviewItems = document.getElementById('cartPreviewItems');
+        const previewTotal = document.getElementById('previewTotal');
+        const signUpModal = document.getElementById('signUpModal');
+        
+        // Add to cart buttons
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                const productName = this.getAttribute('data-product');
+                const productPrice = parseFloat(this.getAttribute('data-price'));
+                
+                addToCart(productId, productName, productPrice, 1);
+                
+                // Show confirmation
+                showNotification(`${productName} added to cart!`);
+            });
+        });
+        
+        // Add item to cart
+        function addToCart(id, name, price, quantity) {
+            // Check if item already exists in cart
+            const existingItem = cart.find(item => item.id === id);
+            
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({
+                    id: id,
+                    name: name,
+                    price: price,
+                    quantity: quantity
+                });
+            }
+            
+            updateCartDisplay();
+        }
+        
+        // Remove item from cart
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartDisplay();
+        }
+        
+        // Update cart quantity
+        function updateCartQuantity(id, newQuantity) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                if (newQuantity <= 0) {
+                    removeFromCart(id);
+                } else {
+                    item.quantity = newQuantity;
+                }
+                updateCartDisplay();
+            }
+        }
+        
+        // Update cart display
+        function updateCartDisplay() {
+            // Update cart badge
+            cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0);
+            cartBadge.textContent = cartItemsCount;
+            
+            // Update cart modal
+            updateCartModal();
+            
+            // Update cart preview
+            updateCartPreview();
+        }
+        
+        // Update cart modal
+        function updateCartModal() {
+            cartItemsContainer.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+                cartTotal.textContent = '0.00';
+                return;
+            }
+            
+            let total = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-details">$${item.price.toFixed(2)} x ${item.quantity}</div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="cart-item-price">$${itemTotal.toFixed(2)}</div>
+                        <button class="remove-item" data-id="${item.id}">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                
+                cartItemsContainer.appendChild(cartItem);
+            });
+            
+            cartTotal.textContent = total.toFixed(2);
+            
+            // Add event listeners to remove buttons
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    removeFromCart(id);
+                });
+            });
+        }
+        
+        // Update cart preview
+        function updateCartPreview() {
+            cartPreviewItems.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartPreviewItems.innerHTML = '<div class="text-center p-2">Your cart is empty</div>';
+                previewTotal.textContent = '0.00';
+                return;
+            }
+            
+            let total = 0;
+            let itemsToShow = cart.slice(0, 3); // Show only first 3 items in preview
+            
+            itemsToShow.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const previewItem = document.createElement('div');
+                previewItem.className = 'cart-preview-item';
+                previewItem.innerHTML = `
+                    <span>${item.name} (${item.quantity})</span>
+                    <span>$${itemTotal.toFixed(2)}</span>
+                `;
+                
+                cartPreviewItems.appendChild(previewItem);
+            });
+            
+            // Show indicator if there are more items
+            if (cart.length > 3) {
+                const moreItems = document.createElement('div');
+                moreItems.className = 'cart-preview-item text-center';
+                moreItems.textContent = `... and ${cart.length - 3} more items`;
+                cartPreviewItems.appendChild(moreItems);
+            }
+            
+            previewTotal.textContent = total.toFixed(2);
+        }
+        
+        // Show notification
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'alert alert-success position-fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.zIndex = '10000';
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Close cart modal
+        document.getElementById('closeCartModal').addEventListener('click', closeCartModal);
+        document.getElementById('continueShopping').addEventListener('click', closeCartModal);
+        
+        function closeCartModal() {
+            cartModal.style.display = 'none';
+        }
+        
+        // Open cart modal
+        document.getElementById('cartButton').addEventListener('click', function(e) {
+            e.preventDefault();
+            cartModal.style.display = 'flex';
+        });
+        
+        document.getElementById('viewCartBtn').addEventListener('click', function() {
+            cartModal.style.display = 'flex';
+        });
+        
+        // Checkout button
+        document.getElementById('checkoutBtn').addEventListener('click', function() {
+            if (cart.length === 0) {
+                alert('Your cart is empty. Add some items before checking out.');
+                return;
+            }
+            alert('Proceeding to checkout! In a real application, this would redirect to a checkout page.');
+        });
+        
+        // Sign Up functionality
+        document.getElementById('signUpButton').addEventListener('click', function() {
+            signUpModal.style.display = 'flex';
+        });
+        
+        document.getElementById('closeSignUpModal').addEventListener('click', closeSignUpModal);
+        
+        function closeSignUpModal() {
+            signUpModal.style.display = 'none';
+        }
+        
+        // Sign Up form submission
+        document.getElementById('signUpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            // In a real application, you would send this data to a server
+            alert('Account created successfully! Welcome to Flower Paradise.');
+            closeSignUpModal();
+            
+            // Reset form
+            document.getElementById('signUpForm').reset();
+        });
+        
+        // Login link
+        document.getElementById('loginLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Login functionality would be implemented here.');
+        });
+        
+        // Initialize cart display
+        updateCartDisplay();
+    </script>
+</body>
+</html>
